@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-kitchen.jpg";
@@ -41,12 +42,14 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="lg" className="text-base px-8 py-6">
-              Shop Kitchens
-              <ArrowRight className="w-4 h-4 ml-1" />
+            <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
+              <Link to="/kitchens">
+                Shop Kitchens
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
             </Button>
-            <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
-              Sell with Rehome
+            <Button variant="hero-outline" size="lg" className="text-base px-8 py-6" asChild>
+              <Link to="/something-to-sell">Sell with Rehome</Link>
             </Button>
           </div>
 
