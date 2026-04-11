@@ -14,6 +14,12 @@ import HowItWorks from "./pages/HowItWorks.tsx";
 import ProductDetail from "./pages/ProductDetail.tsx";
 import Cart from "./pages/Cart.tsx";
 import Wishlist from "./pages/Wishlist.tsx";
+import CustomerStories from "./pages/CustomerStories.tsx";
+import TipsAndTricks from "./pages/TipsAndTricks.tsx";
+import Sustainability from "./pages/Sustainability.tsx";
+import TermsAndConditions from "./pages/TermsAndConditions.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import MyAlerts from "./pages/MyAlerts.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -36,6 +42,12 @@ const App = () => (
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/customer-stories" element={<CustomerStories />} />
+          <Route path="/tips-and-tricks" element={<TipsAndTricks />} />
+          <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/alerts" element={<MyAlerts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

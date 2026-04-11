@@ -9,21 +9,21 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: "Home & Garden", href: "/home-garden" },
   ],
   Inspiration: [
-    { label: "Customer Stories", href: "/" },
-    { label: "Tips & Tricks", href: "/" },
-    { label: "Sustainability", href: "/" },
+    { label: "Customer Stories", href: "/customer-stories" },
+    { label: "Tips & Tricks", href: "/tips-and-tricks" },
+    { label: "Sustainability", href: "/sustainability" },
   ],
   Information: [
     { label: "Why Rehome?", href: "/how-it-works" },
     { label: "How it Works", href: "/how-it-works" },
     { label: "FAQs", href: "/contact" },
-    { label: "Terms & Conditions", href: "/" },
-    { label: "Privacy Policy", href: "/" },
+    { label: "Terms & Conditions", href: "/terms" },
+    { label: "Privacy Policy", href: "/privacy" },
   ],
   "Your Rehome": [
-    { label: "My Account", href: "/" },
+    { label: "My Account", href: "/account" },
     { label: "Saved Items", href: "/wishlist" },
-    { label: "My Alerts", href: "/" },
+    { label: "My Alerts", href: "/alerts" },
     { label: "Something to Sell", href: "/something-to-sell" },
   ],
 };
