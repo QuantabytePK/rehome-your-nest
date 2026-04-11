@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import kitchenImg from "@/assets/category-kitchen.jpg";
 import bathroomImg from "@/assets/category-bathroom.jpg";
@@ -6,10 +7,10 @@ import appliancesImg from "@/assets/category-appliances.jpg";
 import gardenImg from "@/assets/category-garden.jpg";
 
 const categories = [
-  { name: "Kitchens", image: kitchenImg, count: "200+ listings" },
-  { name: "Bathrooms", image: bathroomImg, count: "150+ listings" },
-  { name: "Appliances", image: appliancesImg, count: "300+ listings" },
-  { name: "Home & Garden", image: gardenImg, count: "100+ listings" },
+  { name: "Kitchens", image: kitchenImg, count: "200+ listings", href: "/kitchens" },
+  { name: "Bathrooms", image: bathroomImg, count: "150+ listings", href: "/bathrooms" },
+  { name: "Appliances", image: appliancesImg, count: "300+ listings", href: "/appliances" },
+  { name: "Home & Garden", image: gardenImg, count: "100+ listings", href: "/home-garden" },
 ];
 
 const CategoriesSection = () => {
@@ -33,9 +34,9 @@ const CategoriesSection = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {categories.map((cat, i) => (
-            <motion.a
+            <motion.create(Link)
               key={cat.name}
-              href="#"
+              to={cat.href}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
