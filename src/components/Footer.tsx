@@ -1,10 +1,31 @@
+import { Link } from "react-router-dom";
 import { Leaf } from "lucide-react";
 
-const footerLinks = {
-  "Shop Rehome": ["Kitchens", "Bathrooms", "Appliances", "Home & Garden", "Partner Offers"],
-  Inspiration: ["Customer Stories", "Tips & Tricks", "Sustainability"],
-  Information: ["Why Rehome?", "How it Works", "FAQs", "Terms & Conditions", "Privacy Policy"],
-  "Your Rehome": ["My Account", "Saved Items", "My Alerts", "Something to Sell"],
+const footerLinks: Record<string, { label: string; href: string }[]> = {
+  "Shop Rehome": [
+    { label: "Kitchens", href: "/kitchens" },
+    { label: "Bathrooms", href: "/bathrooms" },
+    { label: "Appliances", href: "/appliances" },
+    { label: "Home & Garden", href: "/home-garden" },
+  ],
+  Inspiration: [
+    { label: "Customer Stories", href: "/" },
+    { label: "Tips & Tricks", href: "/" },
+    { label: "Sustainability", href: "/" },
+  ],
+  Information: [
+    { label: "Why Rehome?", href: "/how-it-works" },
+    { label: "How it Works", href: "/how-it-works" },
+    { label: "FAQs", href: "/contact" },
+    { label: "Terms & Conditions", href: "/" },
+    { label: "Privacy Policy", href: "/" },
+  ],
+  "Your Rehome": [
+    { label: "My Account", href: "/" },
+    { label: "Saved Items", href: "/wishlist" },
+    { label: "My Alerts", href: "/" },
+    { label: "Something to Sell", href: "/something-to-sell" },
+  ],
 };
 
 const Footer = () => {
@@ -13,7 +34,7 @@ const Footer = () => {
       <div className="container py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <a href="/" className="font-display text-2xl font-bold mb-4 block">Rehome</a>
+            <Link to="/" className="font-display text-2xl font-bold mb-4 block">Rehome</Link>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-4">
               Quality interiors are built to last. We give them a second life — affordable, sustainable, beautiful.
             </p>
@@ -28,10 +49,10 @@ const Footer = () => {
               <h4 className="font-semibold text-sm mb-4 text-primary-foreground">{heading}</h4>
               <ul className="space-y-2">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-primary-foreground/50 text-sm hover:text-gold transition-colors">
-                      {link}
-                    </a>
+                  <li key={link.label}>
+                    <Link to={link.href} className="text-primary-foreground/50 text-sm hover:text-gold transition-colors">
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
