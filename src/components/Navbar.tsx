@@ -41,9 +41,9 @@ const Navbar = () => {
           <Link to="/contact" className="hidden md:flex p-2 text-muted-foreground hover:text-foreground transition-colors">
             <Phone className="w-5 h-5" />
           </Link>
-          <button className="hidden md:flex p-2 text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/auth" className="hidden md:flex p-2 text-muted-foreground hover:text-foreground transition-colors">
             <User className="w-5 h-5" />
-          </button>
+          </Link>
           <Link to="/wishlist" className="hidden md:flex p-2 text-muted-foreground hover:text-foreground transition-colors">
             <Heart className="w-5 h-5" />
           </Link>
